@@ -29,8 +29,10 @@ public class SmsReceiver extends BroadcastReceiver {
 
                 Log.d("RECEIVER", "numer000: "+phoneNumber+" Mensaje: "+message );
 
+                if(message.matches("(?i).*Oreo.*")){
+
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.mx/"));
-                context.startActivity(browserIntent);
+                context.startActivity(browserIntent);}
 
 
             }
