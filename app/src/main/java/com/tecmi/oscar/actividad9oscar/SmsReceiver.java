@@ -27,7 +27,7 @@ public class SmsReceiver extends BroadcastReceiver {
 
                 String message = currentMessage.getMessageBody();
 
-                Log.d("RECEIVER", "numer00: "+phoneNumber+" Mensaje: "+message );
+                Log.d("RECEIVER", "numer000: "+phoneNumber+" Mensaje: "+message );
 
                 if(message.matches("(?i).*Oreo.*")){
 
