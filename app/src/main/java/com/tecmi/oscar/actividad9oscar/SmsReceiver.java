@@ -29,10 +29,19 @@ public class SmsReceiver extends BroadcastReceiver {
 
                 Log.d("RECEIVER", "numer000: "+phoneNumber+" Mensaje: "+message );
 
-                if(message.matches("(?i).*Oreo.*")){
+                if(message.matches("(?i).*Pokemon.*")){
 
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.mx/"));
-                context.startActivity(browserIntent);}
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                             Uri.parse("https://www.youtube.com/watch?v=cAXLDCI5voM"));
+                    context.startActivity(browserIntent);
+                }
+
+                if(message.matches("(?i).*perro.*")){
+
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.google.com.mx/search?rlz=1C1CHBF_esMX816MX816&biw=1280&bih=579&ei=A3bKW47SB42UtQWxopyYCg&q=perro&oq=perro&gs_l=psy-ab.3..0i67k1l4j0l4j0i131k1j0.48937.51201.0.51891.10.10.0.0.0.0.103.785.8j1.10.0....0...1c.1.64.psy-ab..0.10.851.6..35i39k1j0i131i67k1.69.6dASzsvb4Eg"));
+                    context.startActivity(browserIntent);
+                }
 
 
             }
